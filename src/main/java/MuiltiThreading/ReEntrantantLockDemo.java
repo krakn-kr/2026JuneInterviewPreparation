@@ -19,8 +19,9 @@ class ReentrantLock1 implements Runnable{
     ReentrantLock reentrantLock = new ReentrantLock();
     @Override
     public void run() {
-        reentrantLock.lock();
         System.out.println("started thread"+Thread.currentThread().getName());
+        reentrantLock.lock();
+        System.out.println("processing thread"+Thread.currentThread().getName());
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {

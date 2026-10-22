@@ -23,6 +23,7 @@ public class UniqueWordsCollector {
                 .map(String::toLowerCase)
                 .collect(Collectors.toSet());
         System.out.println(result);
-        new Random().nextInt();
+        System.out.println(new Random().nextInt(0,11));
+        System.out.println((int)(Math.random()*11));
     }
 }

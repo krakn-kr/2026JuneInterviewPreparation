@@ -13,7 +13,9 @@ public class Main {
                 .mapToObj(i -> (char) i)
                 .filter(character -> !Character.isLetterOrDigit(character))
                 .collect(Collectors.toSet());
-        String result2 = result.stream().map(String::valueOf).collect(Collectors.joining());
+        String result2 = result.stream()
+                .map(String::valueOf)
+                .collect(Collectors.joining());
         System.out.println(result2);
 
     }

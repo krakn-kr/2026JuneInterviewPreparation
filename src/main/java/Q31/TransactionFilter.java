@@ -2,6 +2,7 @@ package Q31;
 
 import java.util.List;
 
+import java.util.Objects;
 import java.util.Set;
 
 import java.util.stream.Collectors;
@@ -39,6 +40,17 @@ class Transaction {
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Transaction that = (Transaction) o;
+        return Double.compare(amount, that.amount) == 0 && Objects.equals(type, that.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(type, amount);
+    }
 
     @Override
 
@@ -64,6 +76,7 @@ public class TransactionFilter {
 
                 new Transaction("withdrawal", 50.0),
 
+                new Transaction("deposit", 200.0),
                 new Transaction("deposit", 200.0),
 
                 new Transaction("transfer", 150.0)

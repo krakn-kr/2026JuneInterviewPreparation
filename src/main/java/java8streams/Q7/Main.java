@@ -78,5 +78,6 @@ public class Main {
         );
         Optional<Employee> max = employeeList.stream().max(Comparator.comparingDouble(Employee::getSalary));
         max.ifPresent(System.out::println);
+
     }
 }

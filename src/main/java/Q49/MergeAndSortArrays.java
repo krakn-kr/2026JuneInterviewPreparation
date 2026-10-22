@@ -10,6 +10,7 @@ public class MergeAndSortArrays {
         Integer[] array2 = {3, 7, 1, 8};
         Integer[] result = Stream.concat(Arrays.stream(array1), Arrays.stream(array2))
                 .distinct()
+                .sorted()
                 .toArray(Integer[]::new);
         System.out.println(Arrays.toString(result));
     }

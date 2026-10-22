@@ -9,7 +9,8 @@ public class PrefixCheck {
 
         String prefix = "ba";
 
-        boolean b = strings.stream().anyMatch(str -> str.startsWith(prefix));
+        boolean b = strings.stream()
+                .anyMatch(str -> str.startsWith(prefix));
         System.out.println(b);
     }
 }
